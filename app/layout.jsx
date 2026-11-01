@@ -1,3 +1,9 @@
-  export default function RootLayout({ children }: { children: React.ReactNode }) {
-    return (<html lang="en"><body>{children}</body></html>)
-  }
+import "./globals.css";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="id">
+      <body style={{margin:0}}>{children}</body>
+    </html>
+  );
+}
