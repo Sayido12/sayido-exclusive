@@ -1,33 +1,18 @@
-<!-- FIXED BANNER - 3 TIMER ONLY, FULL WIDTH, NO SPACE KOSONG, UKURAN TETAP -->
-<div class="mx-2 mt-2" style="background:linear-gradient(90deg,#C1272D,#991B1B); border-radius:10px; display:flex; justify-content:space-between; align-items:center; padding:8px 12px;">
-  <div class="text-white">
-    <div style="font-weight:700; font-size:13px; line-height:1; opacity:.9">SPECIAL DISC</div>
-    <div style="font-weight:800; font-size:22px; line-height:1">50%</div>
-  </div>
-  <div style="display:flex; gap:6px;">
-    <div style="background:white; border-radius:7px; min-width:42px; padding:3px 6px; text-align:center;">
-      <div id="h" style="font-weight:800; font-size:15px; color:#C1272D; line-height:1">23</div>
-      <div style="font-size:9px; font-weight:700; color:#C1272D;">Jam</div>
-    </div>
-    <div style="background:white; border-radius:7px; min-width:42px; padding:3px 6px; text-align:center;">
-      <div id="m" style="font-weight:800; font-size:15px; color:#C1272D; line-height:1">59</div>
-      <div style="font-size:9px; font-weight:700; color:#C1272D;">Menit</div>
-    </div>
-    <div style="background:white; border-radius:7px; min-width:42px; padding:3px 6px; text-align:center;">
-      <div id="s" style="font-weight:800; font-size:15px; color:#C1272D; line-height:1">04</div>
-      <div style="font-size:9px; font-weight:700; color:#C1272D;">Detik</div>
-    </div>
-  </div>
-</div>
-
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SAYIDO.ID</title><script src="https://cdn.tailwindcss.com"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"><style>body{background:#FFFBF7;font-family:system-ui}.card{background:#FFFEF9;border:1px solid #E6C78A;border-radius:14px;overflow:hidden}.mockup{background:#ECE9E6;border-radius:12px;aspect-ratio:1/0.95;display:flex;gap:8px;justify-content:center;align-items:center;padding:10px}.phone{width:46%;aspect-ratio:9/19.5;background:white;border-radius:10px;border:1.5px solid #111;box-shadow:0 4px 10px rgba(0,0,0,.2);overflow:hidden;display:flex;flex-direction:column}</style></head><body class="max-w-[420px] mx-auto pb-[70px]">
+<div class="sticky top-0 z-30 bg-[#FFFBF7] px-3 py-2.5 flex justify-between items-center shadow-sm"><div class="flex items-center gap-2"><i class="fa-solid fa-chevron-left text-[#0F2A4A]"></i><div class="font-extrabold text-[20px] text-[#0F2A4A]" style="font-family:serif">SAYIDO.ID</div></div><div class="flex gap-4 text-[18px]"><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-cart-shopping"></i></div></div>
+<div class="mx-2.5 mt-2" style="background:linear-gradient(90deg,#C1272D,#991B1B);border-radius:10px;display:flex;justify-content:space-between;align-items:center;padding:7px 12px"><div class="text-white"><div style="font-weight:700;font-size:11px;opacity:.9;line-height:1">SPECIAL DISC</div><div style="font-weight:800;font-size:19px;line-height:1">50%</div></div><div style="display:flex;gap:5px"><div style="background:white;border-radius:6px;min-width:42px;padding:2px 5px;text-align:center"><div id="h" style="font-weight:800;font-size:14px;color:#C1272D;line-height:1">01</div><div style="font-size:8px;font-weight:700;color:#C1272D">Jam</div></div><div style="background:white;border-radius:6px;min-width:42px;padding:2px 5px;text-align:center"><div id="m" style="font-weight:800;font-size:14px;color:#C1272D;line-height:1">37</div><div style="font-size:8px;font-weight:700;color:#C1272D">Menit</div></div><div style="background:white;border-radius:6px;min-width:42px;padding:2px 5px;text-align:center"><div id="s" style="font-weight:800;font-size:14px;color:#C1272D;line-height:1">35</div><div style="font-size:8px;font-weight:700;color:#C1272D">Detik</div></div></div></div>
+<div id="grid" class="grid grid-cols-2 gap-2.5 p-2.5 mt-1"></div>
+<div class="fixed bottom-0 w-full max-w-[420px] bg-white border-t flex justify-around py-3 text-[12px]"><span>Home</span><span class="font-bold border-b-2 border-[#D4AF37]">Catalog</span><span>Orders</span><span>Profile</span></div>
+<div id="prev" class="fixed inset-0 bg-black/60 hidden z-50 flex items-center justify-center p-4"><div class="bg-white w-full max-w-[390px] rounded-xl overflow-hidden"><div class="flex justify-between p-3 border-b"><b id="prevT">Preview</b><button onclick="closePrev()">✕</button></div><div id="prevC" class="p-0"></div><div class="p-2 grid grid-cols-2 gap-2 border-t"><button onclick="closePrev()" class="border py-2 rounded-full">Tutup</button><button onclick="toOrder()" class="bg-[#0F2A4A] text-white py-2 rounded-full">Order</button></div></div></div>
+<div id="ord" class="fixed inset-0 bg-black/60 hidden z-50 flex items-end justify-center"><div class="bg-white w-full max-w-[420px] rounded-t-xl p-4"><div class="flex justify-between"><b>Order <span id="ordN">FLORAL 5</span></b><button onclick="closeOrd()">✕</button></div><div class="text-[11px] text-[#C1272D] font-bold">SPECIAL DISC 50% - <span id="ordT">01:37:35</span> lagi!</div><div class="mt-2 space-y-2"><div class="grid grid-cols-2 gap-2"><input id="g" placeholder="Nama pria *" class="border rounded-xl p-3 text-[13px] w-full"><input id="b" placeholder="Nama wanita *" class="border rounded-xl p-3 text-[13px] w-full"></div><input id="w" placeholder="No WA aktif *" class="border rounded-xl p-3 text-[13px] w-full"></div><div class="mt-3 bg-[#0F2A4A] text-white rounded-xl p-3 text-[12px]"><div class="flex justify-between"><span>Total (Disc 50%)</span><span>Rp49.500</span></div></div><button onclick="sendWA()" class="w-full mt-3 bg-[#0F2A4A] text-white py-3 rounded-full font-bold">Kirim WA →</button></div></div>
 <script>
-function updateCountdown(){
-  const now=new Date(); const end=new Date(); end.setHours(23,59,59,999);
-  let diff=end-now; if(diff<0) diff+=86400000;
-  const h=Math.floor(diff/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
-  document.getElementById('h').innerText=String(h).padStart(2,'0');
-  document.getElementById('m').innerText=String(m).padStart(2,'0');
-  document.getElementById('s').innerText=String(s).padStart(2,'0');
-}
-setInterval(updateCountdown,1000); updateCountdown();
-</script>
+let cur='FLORAL 5';
+function render(){const g=document.getElementById('grid');g.innerHTML='';for(let i=0;i<6;i++){const t=(i%2==0)?'Amanda & Ryo':'Dean & Luna';const d=document.createElement('div');d.className='card';d.innerHTML=`<div class="relative p-2"><div class="absolute top-3 left-3 z-10 bg-[#0F2A4A] text-white text-[9px] font-bold px-2 py-1 rounded">New 🔥</div><div class="absolute top-3 right-3 z-10 bg-[#C1272D] text-white text-[9px] font-bold px-2 py-1 rounded">Best 👑</div><div class="mockup"><div class="phone" style="background:linear-gradient(#FFF7F0,#FFE8D6);align-items:center;justify-content:center;padding:6px"><div style="font-family:serif;font-size:10px;font-weight:700">${t}</div></div><div class="phone" style="padding:5px"><div style="height:45%;background:#FFE8D6;border-radius:6px"></div><div style="font-size:6px;font-weight:700;margin-top:4px">DETAILS</div><div style="margin-top:4px;background:#0F2A4A;color:white;font-size:5px;text-align:center;padding:2px;border-radius:3px">RSVP</div></div></div></div><div class="px-2 pb-3 text-center"><div class="font-extrabold text-[14px] text-[#0F2A4A]">FLORAL 5</div><div class="flex justify-center gap-1 mt-1"><span class="bg-[#C1272D] text-white text-[9px] px-1 rounded">50%</span><span class="line-through text-[11px] text-gray-400">Rp. 338.000</span></div><div class="font-extrabold text-[16px] text-[#0F2A4A]">Rp. 99.000</div><div class="grid grid-cols-2 gap-1.5 mt-2"><button onclick="openPrev()" class="border text-[11px] py-2 rounded-lg font-bold">Preview</button><button onclick="openOrd()" class="bg-[#0F2A4A] text-white text-[11px] py-2 rounded-lg font-bold">Order</button></div></div>`;g.appendChild(d);}}
+function upd(){const n=new Date();const e=new Date();e.setHours(23,59,59,999);let d=e-n;if(d<0)d+=86400000;const h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);document.getElementById('h').innerText=String(h).padStart(2,'0');document.getElementById('m').innerText=String(m).padStart(2,'0');document.getElementById('s').innerText=String(s).padStart(2,'0');const o=document.getElementById('ordT');if(o)o.innerText=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}setInterval(upd,1000);upd();render();
+function openPrev(){document.getElementById('prevT').innerText='Preview '+cur;document.getElementById('prevC').innerHTML='<div style="width:390px;margin:0 auto;height:350px;background:linear-gradient(#FFF7F0,#FFE8D6);display:flex;align-items:center;justify-content:center;flex-direction:column"><div style="font-family:serif;font-size:26px">The Wedding</div><div style="font-weight:900;font-size:20px">Amanda & Ryo</div></div>';document.getElementById('prev').classList.remove('hidden');}
+function closePrev(){document.getElementById('prev').classList.add('hidden');}
+function openOrd(){document.getElementById('ord').classList.remove('hidden');}
+function closeOrd(){document.getElementById('ord').classList.add('hidden');}
+function toOrder(){closePrev();setTimeout(openOrd,200);}
+function sendWA(){const g=document.getElementById('g').value.trim(),b=document.getElementById('b').value.trim(),w=document.getElementById('w').value.trim();if(!g||!b||!w){alert('Isi nama & WA dulu');return;}const h=document.getElementById('h').innerText,m=document.getElementById('m').innerText,s=document.getElementById('s').innerText;const txt=`Halo Admin ORDER ${cur} ${g} & ${b} WA:${w} Sisa ${h}:${m}:${s} DISC 50%`;window.open(`https://wa.me/6281908112259?text=${txt}`,'_blank');closeOrd();}
+</script></body></html>
